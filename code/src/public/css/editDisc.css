@@ -52,7 +52,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 
@@ -64,7 +64,7 @@ body {
 
 .page-title {
     font-size: 2rem;
-    color: #1e0d8d;
+    color: #8d0d0d;
     margin-bottom: 20px;
 }
 
@@ -106,7 +106,7 @@ form textarea {
 
 form button {
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     color: #ffffff;
     font-weight: bold;
@@ -134,5 +134,5 @@ form button:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
 }

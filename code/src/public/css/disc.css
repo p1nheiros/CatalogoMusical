@@ -52,7 +52,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 .main-content {
@@ -63,7 +63,7 @@ body {
 
 .page-title {
     font-size: 2rem;
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 .search-form {
@@ -86,7 +86,7 @@ body {
 
 .search-form button {
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     color: #ffffff;
     font-weight: bold;
@@ -200,7 +200,7 @@ body {
 .btn-primary {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -219,7 +219,7 @@ body {
   }
   
   .disco-info p strong {
-    color: #1e0d8d;
+    color: #8d0d0d;
   }
 
 .btn-edit,

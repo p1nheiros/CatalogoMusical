@@ -52,7 +52,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 .main-content {
@@ -63,7 +63,7 @@ body {
 
 .page-title {
     font-size: 2rem;
-    color: #1e0d8d;
+    color: #8d0d0d;
     margin-bottom: 20px;
 }
 
@@ -87,7 +87,7 @@ body {
 
 .genre-form button {
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     color: #ffffff;
     font-weight: bold;
@@ -118,7 +118,7 @@ body {
 }
 
 .genre-title {
-    color: #1e0d8d;
+    color: #8d0d0d;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }

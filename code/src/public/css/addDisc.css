@@ -52,7 +52,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 
@@ -64,7 +64,7 @@ body {
 
 .page-title {
     font-size: 2rem;
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 form {
@@ -103,14 +103,14 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: #1e0d8d;
+    border-color: #8d0d0d;
     outline: none;
 }
 
 form button {
     width: 100%;
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     color: #ffffff;
     font-weight: bold;
@@ -142,7 +142,7 @@ form button:hover {
   }
   
   .link-voltar a:hover {
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
   }
   
 
@@ -192,7 +192,7 @@ form button:hover {
   
   .faixa-input-container button {
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     color: #ffffff;
     font-weight: bold;
@@ -225,7 +225,7 @@ form button:hover {
   
   select:focus {
     outline: none;
-    border-color: #1e0d8d;
+    border-color: #8d0d0d;
   }
   
   select[multiple] {

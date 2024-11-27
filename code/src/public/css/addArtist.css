@@ -52,7 +52,7 @@ body {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #1e0d8d;
+    color: #8d0d0d;
 }
 
 
@@ -64,7 +64,7 @@ body {
 
 .page-title {
     font-size: 2rem;
-    color: #1e0d8d;
+    color: #8d0d0d;
     margin-bottom: 20px;
 }
 
@@ -104,7 +104,7 @@ form button {
 }
 
 form button {
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -129,14 +129,14 @@ form button:hover {
 }
 
 #discos-search:focus {
-    border-color: #1e0d8d;
+    border-color: #8d0d0d;
     outline: none;
 }
 
 
 #search-button {
     padding: 10px 20px;
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     color: white;
     border: none;
     border-radius: 8px;
@@ -187,7 +187,7 @@ form button:hover {
     appearance: none; 
     width: 20px;
     height: 20px;
-    border: 2px solid #1e0d8d;
+    border: 2px solid #8d0d0d;
     border-radius: 4px;
     background-color: #1c1c1c;
     cursor: pointer;
@@ -196,7 +196,7 @@ form button:hover {
 }
 
 #discos-list li input[type="checkbox"]:checked {
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
     border-color: #1a1157;
 }
 
@@ -224,7 +224,7 @@ form button:hover {
 
 .discos-selecionados h3 {
     margin-bottom: 10px;
-    color: #1e0d8d;
+    color: #8d0d0d;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -260,6 +260,6 @@ form button:hover {
   }
   
   .link-voltar a:hover {
-    background-color: #1e0d8d;
+    background-color: #8d0d0d;
   }
   
