@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gêneros</title>
+  <link rel="stylesheet" href="/css/genres.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="navbar">
+      <div class="navbar-title">
+        <a href="/"><img src="/image/LogoTipo.png" alt="Logo" class="logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/discs">Discos</a></li>
+        <li><a href="/artists">Artistas</a></li>
+        <li><a href="/genres" class="active">Gêneros</a></li>
+      </ul>
+    </header>
+
+    <main class="main-content">
+      <h1 class="page-title">Lista de Gêneros</h1>
+
+      <form action="/genres/add" method="POST" class="genre-form">
+        <input type="text" name="nome" placeholder="Nome do gênero" required>
+        <button type="submit" class="btn-primary">Adicionar</button>
+      </form>
+
+      <% if (generos.length > 0) { %>
+        <div class="genres-list">
+          <% generos.forEach(genero => { %>
+            <div class="genre-item">
+              <h2 class="genre-title"><%= genero.nome %></h2>
+              <div class="genre-section">
+                <h3>Discos:</h3>
+                <% if (genero.Discos.length > 0) { %>
+                  <ul>
+                    <% genero.Discos.forEach(disco => { %>
+                      <li><%= disco.titulo %> - <%= disco.ano %></li>
+                    <% }) %>
+                  </ul>
+                <% } else { %>
+                  <p class="empty-list">Nenhum disco encontrado.</p>
+                <% } %>
+              </div>
+              <div class="genre-section">
+                <h3>Artistas:</h3>
+                <% if (genero.Artista.length > 0) { %>
+                  <ul>
+                    <% genero.Artista.forEach(artista => { %>
+                      <li><%= artista.nome %></li>
+                    <% }) %>
+                  </ul>
+                <% } else { %>
+                  <p class="empty-list">Nenhum artista encontrado.</p>
+                <% } %>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <p class="no-genres">Nenhum gênero encontrado.</p>
+      <% } %>
+    </main>
+  </div>
+</body>
+</html>

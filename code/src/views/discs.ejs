@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Discos</title>
+  <link rel="stylesheet" href="/css/disc.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="navbar">
+      <div class="navbar-title">
+        <a href="/"><img src="/image/LogoTipo.png" alt="Logo" class="logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/discs" class="active">Discos</a></li>
+        <li><a href="/artists">Artistas</a></li>
+        <li><a href="/genres">Gêneros</a></li>
+      </ul>
+    </header>
+    <main class="main-content">
+      <h1 class="page-title">Discos Cadastrados</h1>
+      <a href="/discs/add" class="btn-primary">Cadastrar Novo Disco</a>
+
+      <form action="/discs/search" method="GET" class="search-form">
+        <input type="text" name="titulo" placeholder="Buscar por título">
+        <input type="text" name="genero" placeholder="Buscar por gênero">
+        <button type="submit" class="btn-secondary">Buscar</button>
+      </form>  
+
+      <% if (discos.length > 0) { %>
+        <div class="disco-list">
+          <% discos.forEach(disco => { %>
+            <div class="disco-item">
+                <img src="<%= disco.capa %>" alt="Capa de <%= disco.titulo %>" class="disco-capa">
+                <div class="disco-info">
+                  <h2><%= disco.titulo %> (<%= disco.ano %>)</h2>
+                  <strong>Faixas:</strong>
+                  <ul>
+                    <% disco.faixas.forEach(faixa => { %>
+                      <li><%= faixa %></li>
+                    <% }) %>
+                  </ul>
+                  <div class="disco-actions">
+                    <a href="/discs/edit/<%= disco.id %>" class="btn-edit">Editar</a>
+                    <form action="/discs/delete/<%= disco.id %>" method="POST" class="btn-delete-form">
+                      <button type="submit" class="btn-delete">Excluir</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <p class="no-discos">Nenhum disco cadastrado.</p>
+      <% } %>
+    </main>
+  </div>
+</body>
+</html>

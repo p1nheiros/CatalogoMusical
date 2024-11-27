@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Artista</title>
+  <link rel="stylesheet" href="/css/editArtist.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="navbar">
+      <div class="navbar-title">
+        <a href="/"><img src="/image/LogoTipo.png" alt="Logo" class="logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Início</a></li>
+        <li><a href="/discs">Discos</a></li>
+        <li><a href="/artists" class="active">Artistas</a></li>
+        <li><a href="/genres">Gêneros</a></li>
+      </ul>
+    </header>
+
+    <main class="main-content">
+      <h1 class="page-title">Editar Artista</h1>
+
+      <form action="/artists/edit/<%= artista.id %>" method="POST" class="edit-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<%= artista.nome %>" required>
+
+        <label for="genero">Gênero Musical:</label>
+        <input type="text" id="genero" name="genero" value="<%= artista.genero %>" required>
+
+        <label for="foto">URL da Foto:</label>
+        <input type="url" id="foto" name="foto" value="<%= artista.foto %>" required>
+
+        <label for="discos-search">Buscar Discos:</label>
+        <input type="text" id="discos-search" placeholder="Digite para buscar discos">
+        <button type="button" id="search-button">Buscar</button>
+
+        <ul id="discos-list" class="discos-list">
+          <% discos.forEach(disco => { %>
+            <li>
+              <input type="checkbox" id="disco-<%= disco.id %>" name="discos" value="<%= disco.id %>"
+              <%= artista.Discos.map(d => d.id).includes(disco.id) ? 'checked' : '' %>>
+              <label for="disco-<%= disco.id %>"><%= disco.titulo %></label>
+            </li>
+          <% }) %>
+        </ul>
+
+        <button type="submit" class="btn-primary">Salvar Alterações</button>
+      </form>
+      <div class="link-voltar">
+        <a href="/artists" class="btn-secondary">Voltar para a lista de artistas</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/editArtist.js"></script>
+</body>
+</html>
